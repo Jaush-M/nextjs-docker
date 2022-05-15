@@ -109,10 +109,29 @@ CMD ["node", "server.js"]
 
 ## Using Docker
 
-1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
-1. Production build: `docker build -t <tag> --target prod .`\
-   Development build: `docker build -t <tag> --target dev .`.
-1. Production container: `docker run --rm --name <name> -dp 3000:3000 <tag>`\
-   Development container: `docker run --rm -it --name <name> -p 3000:3000 -v ${PWD}:/app -w /app <tag>`.
+1. [`Install Docker`](https://docs.docker.com/get-docker/) on your machine.
+1. `Production build`:
+
+   ```
+   docker build -t <tag> --target prod .
+   ```
+
+   `Development build`:
+
+   ```
+   docker build -t <tag> --target dev .
+   ```
+
+1. `Production container`:
+
+   ```
+   docker run --rm --name <name> -dp 3000:3000 <tag>
+   ```
+
+   `Development container`:
+
+   ```
+   docker run --rm -it --name <name> -p 3000:3000 -v ${PWD}:/app -w /app <tag>
+   ```
 
 You can view your images created with `docker images`, and containers using `docker ps`.
