@@ -52,7 +52,7 @@ For a `production environment`, it is strongly recommended you install `sharp` t
 % pnpm install sharp
 ```
 
-### Dockerfile with pnpm
+## Dockerfile with pnpm
 
 ```docker
 # Development Server
