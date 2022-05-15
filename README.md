@@ -4,7 +4,7 @@ This example shows how to use Docker with Next.js based on the [deployment docum
 
 ## Installing pnpm
 
-When using npm or Yarn, if you have 100 projects using a dependency, you will have 100 copies of that dependency saved on disk. With pnpm, the dependency will be stored in a content-addressable store
+When using npm or Yarn, if you have 100 projects using a dependency, you will have 100 copies of that dependency saved on disk. With pnpm, the dependency will be stored in a content-addressable store.
 
 ### Using corepack
 
