@@ -4,7 +4,7 @@ This example shows how to use Docker with Next.js based on the [deployment docum
 
 ## Installing pnpm
 
-When using npm or Yarn, if you have 100 projects using a dependency, you will have 100 copies of that dependency saved on disk. With pnpm, the dependency will be stored in a content-addressable store
+When using npm or Yarn, if you have 100 projects using a dependency, you will have 100 copies of that dependency saved on disk. With pnpm, the dependency will be stored in a content-addressable store.
 
 ### Using corepack
 
@@ -52,7 +52,7 @@ For a `production environment`, it is strongly recommended you install `sharp` t
 % pnpm install sharp
 ```
 
-### Dockerfile
+### Dockerfile with pnpm
 
 ```docker
 # Development Server
@@ -110,7 +110,9 @@ CMD ["node", "server.js"]
 ## Using Docker
 
 1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
-2. For production build: `docker build -t <tag> --target prod .` or development build: `docker build -t <tag> --target dev .`.
-3. Run production container: `docker run --rm --name <name> -dp 3000:3000 <tag>` or development build: `docker run --rm -it --name <name> -p 3000:3000 -v ${PWD}:/app -w /app <tag>`.
+1. Production build: `docker build -t <tag> --target prod .`\
+   Development build: `docker build -t <tag> --target dev .`.
+1. Production container: `docker run --rm --name <name> -dp 3000:3000 <tag>`\
+   Development container: `docker run --rm -it --name <name> -p 3000:3000 -v ${PWD}:/app -w /app <tag>`.
 
 You can view your images created with `docker images`, and containers using `docker ps`.
